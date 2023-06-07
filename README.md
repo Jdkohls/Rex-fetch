@@ -22,7 +22,7 @@ Spoonacular API for recipe suggestions
 Installation
 To install the Ingredient Tracker app, follow these steps:
 
-Clone the repository from GitHub: git clone https://github.com/ingredient-tracker.git
+Clone the repository from GitHub: git clone https://github.com/Jdkohls/Rex-fetch.git
 Install the necessary dependencies for the frontend and backend using the respective package managers.
 Configure the database settings for the backend in the backend/go/config.go file.
 Run the backend using the command go run backend/go/main.go.
