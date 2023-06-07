@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name">RecipeRetriever</string>
+<!--    <string name="action_settings">Settings</string>-->
+    <!-- Strings used for fragments for navigation [Labels] -->
+<!--    <string name="main_activity_label">Login</string>-->
+    <string name="login_label">Login</string>
+    <string name="new_user_label">Create User</string>
+    <string name="home_label">Home</string>
+    <string name="profile_label">Profile</string>
+<!--    <string name="activity_label">Rex Fetch</string>-->
+    <string name="fridge_label">Fridge</string>
+    <string name="recipes_label">Recipes</string>
+    <string name="specific_recipe_label">Individual Recipe</string>
+<!--    <string name="spinner_label">Randomizer</string>-->
+    <string name="grocery_label">Grocery</string>
+<!--    <string name="next">Next</string>-->
+<!--    <string name="previous">Previous</string>-->
+
+    <!--    Fridge    -->
+<!--    <string name="firstPage">Fridge</string>-->
+    <string name="fridge_main_desc">My Fridge</string>
+    <string name="firstPageDesc1">Input the ingredients you currently have in your fridge.\nIf you make a typo, you starve. So&#8230; don\'t make typos!</string>
+<!--    <string name="firstPageDesc2">Below are the ingredients currently in your fridge!</string>-->
+    <string name="addFoodToFridgeButtonText">Add To Fridge</string>
+    <string name="moveToGroceryButtonText">Move To Grocery</string>
+
+    <!--    Recipe - Main Page   -->
+<!--    <string name="secondPage">Recipe</string>-->
+    <string name="secondPageHeader">Recipes</string>
+<!--    <string name="searchButton">Search</string>-->
+<!--    <string name="recipeSearchHint">Enter The Name of a Recipe</string>-->
+    <string name="filter_desc">Filter your search</string>
+    <string name="recipe_desc">Here are the recipes you can make</string>
+    <string name="backToRecipesButtonText">Back To Recipes Page</string>
+
+
+    <!--    Grocery    -->
+<!--    <string name="thirdPage">Grocery</string>-->
+    <string name="grocery_main_desc">My Grocery List</string>
+    <string name="thirdPageDesc1">Input the ingredients you want to buy.\nIf you bought an ingredient click \"Add To Fridge\" to move food to fridge!</string>
+    <string name="addFoodToGroceryButtonText">Add To Grocery</string>
+    <string name="moveToFridgeButtonText">Move To Fridge</string>
+
+    <!--  Login  -->
+    <string name="logoName">Recipe Retriever</string>
+    <string name="usernamePlaceholder">Enter Username</string>
+    <string name="passwordPlaceholder">Enter Password</string>
+    <string name="loginButton">Login</string>
+    <string name="registerButton">New User</string>
+
+    <!--  Spinner  -->
+<!--    <string name="spinnerPage">Randomizer</string>-->
+<!--    <string name="initialSpinnerText">Recipe Randomizer</string>-->
+<!--    <string name="placeholderRecipe">Chicken Noodle Soup</string>-->
+<!--    <string name="spinnerSubmitButton">Randomize</string>-->
+
+    <string name="randomizerButtonText">Pick My Meal</string>
+    <string name="filterButtonText">Filter</string>
+    <string name="ingredients">Ingredients:</string>
+    <string name="stepsText">Steps:</string>
+
+    <!--    Utility    -->
+<!--    <string name="buttonSubmit">Submit</string>-->
+    <string name="exampleFood">eggs</string>
+    <string name="AddFoodButtonText">Add</string>
+    <string name="RemoveFoodButtonText">Remove</string>
+
+    <!--    Profile    -->
+    <string name="profileTitle">My Profile</string>
+    <string name="name">Name: </string>
+    <string name="placeholderName">John Doe</string>
+    <string name="save">Save</string>
+    <string name="allergens">Enter things you are allergic to.</string>
+    <string name="placeholderAllergen">nuts</string>
+    <!--    <string name="substitutions">Write the number of substitutions you are okay with. If there\'s a recipe in which you have 8 of 11 ingredients but are missing 3 ingredients then substitutions would equal 3. Please note that we will try our best to show you recipes without substitutions, if possible.\n(Recommended substitutions: 1&#8211;5)</string>-->
+    <string name="substitutions">Substitutions: 1</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <!--    <string name="placeholderSubstitutions">3</string>-->
+    <!--    <string name="backToRecipeButtonText">Back To Recipe Page</string>-->
+    <string name="backToHomeButtonText">Back To Home Page</string>
+
+    <!--  New User [Register]  -->
+    <string name="username">Username: </string>
+    <string name="password">Password: </string>
+    <string name="reenter">Re-Enter: </string>
+    <string name="reenterPlaceholder">Re-enter your password</string>
+    <string name="registerNewUser">Register</string>
+    <string name="allergensPlainText">Allergens:</string>
+
+    <!--  Home Page  -->
+<!--    <string name="welcomeText">Welcome User</string>-->
+    <string name="home_recipe_btn_txt">Choose A Meal</string>
+    <string name="home_fridge_btn_txt">My Fridge</string>
+    <string name="home_grocery_btn_txt">My Grocery List</string>
+    <string name="home_profile_btn_txt">My Profile</string>
+
+
+    <!--   Settings   -->
+        <!--  Profile   -->
+    <string name="action_settings_profile">Profile</string>
+        <!--  About     -->
+<!--    <string name="action_settings_about">About</string>-->
+        <!--  Settings  -->
+<!--    <string name="action_settings_settings">Settings</string>-->
+        <!--  Logout    -->
+    <string name="action_settings_logout">Logout</string>
+
+    <!--      End       -->
+
+
+    <!-- Deleted Lorem Ipsum -> May need to input it again-->
+    <!--   Errors (For reference I suppose)  -->
+    <!--    <string name="errors_invalid_login">Login Error: Please make sure you have entered the correct Username and Password</string>-->
+    <!--    <string name="errors_no_text_login">Null Error: You forgot to type a username or password. Fun fact, those two text boxes are for typing words&#8230;</string>-->
+    <!--    <string name="errors_no_text_recipe">Null Error: I think you forgot to type a recipe&#8230;</string> &#45;&#45; Unused Currently-->
+    <!--    <string name="errors_no_text_fridge">Null Error: I think you forgot to type a food item for the fridge&#8230;</string>-->
+    <!--    <string name="errors_no_text_grocery">Null Error: I think you forgot to type a food item for the grocery&#8230;</string>-->
+    <!--    <string name="errors_duplicate_item_fridge">Duplicate Error: Item is already in the fridge.</string>-->
+    <!--    <string name="errors_duplicate_item_grocery">Duplicate Error: Item is already in the grocery.</string>-->
+    <!--    <string name="errors_no_item_to_remove_fridge">Remove Error: Item to remove isn\'t in the fridge.</string>-->
+    <!--    <string name="errors_no_item_to_remove_grocery">Remove Error: Item to remove isn\'t in the grocery.</string>-->
+</resources>
+

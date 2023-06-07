@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScrollableRecipePage">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/welcomeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Welcome User"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/firstPageButton"
+            android:layout_width="215dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="@color/blue"
+            android:text="@string/home_recipe_btn_txt"
+            app:layout_constraintEnd_toEndOf="@+id/welcomeTextView"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/welcomeTextView"
+            app:layout_constraintTop_toBottomOf="@+id/welcomeTextView" />
+
+        <Button
+            android:id="@+id/secondPageButton"
+            android:layout_width="215dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/blue"
+            android:text="@string/home_fridge_btn_txt"
+            app:layout_constraintEnd_toEndOf="@+id/welcomeTextView"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/welcomeTextView"
+            app:layout_constraintTop_toBottomOf="@+id/firstPageButton" />
+
+        <Button
+            android:id="@+id/thirdPageButton"
+            android:layout_width="215dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/blue"
+            android:text="@string/home_grocery_btn_txt"
+            app:layout_constraintEnd_toEndOf="@+id/welcomeTextView"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/welcomeTextView"
+            app:layout_constraintTop_toBottomOf="@+id/secondPageButton" />
+
+        <Button
+            android:id="@+id/fourthPageButton"
+            android:layout_width="215dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/blue"
+            android:text="@string/home_profile_btn_txt"
+            app:layout_constraintEnd_toEndOf="@+id/welcomeTextView"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/welcomeTextView"
+            app:layout_constraintTop_toBottomOf="@+id/thirdPageButton" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

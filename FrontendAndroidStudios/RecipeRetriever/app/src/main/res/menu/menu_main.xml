@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.reciperetriever.MainActivity">
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/action_settings_profile"
+        app:showAsAction="never" />
+<!--    <item-->
+<!--        android:id="@+id/about"-->
+<!--        android:icon="@drawable/ic_about"-->
+<!--        android:title="@string/action_settings_about"-->
+<!--        app:showAsAction="never" />-->
+<!--    <item-->
+<!--        android:id="@+id/settings"-->
+<!--        android:icon="@drawable/ic_settings_gear"-->
+<!--        android:title="@string/action_settings_settings"-->
+<!--        app:showAsAction="never" />-->
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/ic_settings_gear"
+        android:title="@string/action_settings_logout"
+        app:showAsAction="never" />
+</menu>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/Login">
+    <!--Toolbar Actions -->
+    <action
+        android:id="@+id/go_to_login_page"
+        app:destination="@+id/Login"
+        />
+    <!--    Login Frag    -->
+    <fragment
+        android:id="@+id/Login"
+        android:name="com.example.reciperetriever.Login"
+        android:label="@string/login_label"
+        tools:layout="@layout/login">
+
+        <!-- Takes the user to the home page -->
+        <action
+            android:id="@+id/action_login_to_home"
+            app:destination="@id/Home" />
+        <!-- Takes the user to the registration page -->
+        <action
+            android:id="@+id/action_login_to_new_user"
+            app:destination="@id/NewUser" />
+    </fragment>
+    <!--    Register New User Frag  -->
+    <fragment
+        android:id="@+id/NewUser"
+        android:name="com.example.reciperetriever.NewUser"
+        android:label="@string/new_user_label"
+        tools:layout="@layout/new_user">
+        <!-- Takes the user to the login page -->
+        <action
+            android:id="@+id/action_new_user_to_login"
+            app:destination="@+id/Login"/>
+    </fragment>
+    <!--    Home Frag    -->
+    <fragment
+        android:id="@+id/Home"
+        android:name="com.example.reciperetriever.Home"
+        android:label="@string/home_label"
+        tools:layout="@layout/home">
+
+        <action
+            android:id="@+id/action_home_to_recipes"
+            app:destination="@id/Recipes" />
+        <action
+            android:id="@+id/action_home_to_fridge"
+            app:destination="@id/Fridge" />
+        <action
+            android:id="@+id/action_home_to_grocery"
+            app:destination="@id/Grocery" />
+        <action
+            android:id="@+id/action_goto_profile"
+            app:destination="@id/Profile" />
+        <action
+            android:id="@+id/action_login_to_new_user"
+            app:destination="@id/NewUser" />
+    </fragment>
+
+    <!--    Fridge Frag    -->
+    <fragment
+        android:id="@+id/Fridge"
+        android:name="com.example.reciperetriever.FridgePage"
+        android:label="@string/fridge_label"
+        tools:layout="@layout/fridge">
+        <action
+            android:id="@+id/action_fridge_to_home"
+            app:destination="@id/Home" />
+        <!--    Toolbar    -->
+        <action
+            android:id="@+id/action_goto_profile"
+            app:destination="@id/Profile" />
+    </fragment>
+    <!--    Recipes Frag    -->
+    <fragment
+        android:id="@+id/Recipes"
+        android:name="com.example.reciperetriever.ScrollableRecipePage"
+        android:label="@string/recipes_label"
+        tools:layout="@layout/recipes_main">
+
+        <action
+            android:id="@+id/action_recipe_to_home"
+            app:destination="@id/Home" />
+        <action
+            android:id="@+id/action_recipes_to_specific_recipe"
+            app:destination="@id/SpecificRecipe" />
+        <!--    Toolbar    -->
+        <action
+            android:id="@+id/action_goto_profile"
+            app:destination="@id/Profile" />
+    </fragment>
+    <!--   Specific Recipe Frag   -->
+    <fragment
+        android:id="@+id/SpecificRecipe"
+        android:name="com.example.reciperetriever.IndividualRecipePage"
+        android:label="@string/specific_recipe_label"
+        tools:layout="@layout/specific_recipe">
+
+        <action
+            android:id="@+id/action_specific_recipe_to_recipes"
+            app:destination="@id/Recipes" />
+        <!--    Toolbar    -->
+        <action
+            android:id="@+id/action_goto_profile"
+            app:destination="@id/Profile" />
+    </fragment>
+    <!--    Grocery Frag    -->
+    <fragment
+        android:id="@+id/Grocery"
+        android:name="com.example.reciperetriever.GroceryPage"
+        android:label="@string/grocery_label"
+        tools:layout="@layout/grocery">
+
+        <action
+            android:id="@+id/action_grocery_to_home"
+            app:destination="@id/Home" />
+        <!--    Toolbar    -->
+        <action
+            android:id="@+id/action_goto_profile"
+            app:destination="@id/Profile" />
+    </fragment>
+    <!--  Profile  -->
+    <fragment
+        android:id="@+id/Profile"
+        android:name="com.example.reciperetriever.Profile"
+        android:label="@string/profile_label"
+        tools:layout="@layout/profile">
+
+        <!--    Back To Main    -->
+        <action
+            android:id="@+id/action_profile_to_home"
+            app:destination="@id/Home" />
+        <!--   Yes, I know the below is redundant but if some user is "smart" enough to try to
+        click the wrong button it'll crash the app without this snippet     -->
+        <action
+            android:id="@+id/action_goto_profile"
+            app:destination="@id/Profile" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/usersProfileText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/profileTitle"
+            android:textSize="40sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/profileNestedLinearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fillViewport="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.468"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/usersProfileText">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/name"
+                    android:textSize="25sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputName"
+                    android:layout_width="120dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:hint="@string/placeholderName"
+                    app:layout_constraintBottom_toBottomOf="@+id/nameText"
+                    app:layout_constraintStart_toEndOf="@+id/nameText"
+                    app:layout_constraintTop_toTopOf="@+id/nameText" />
+
+                <Button
+                    android:id="@+id/saveName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:backgroundTint="@color/blue"
+                    android:text="@string/save"
+                    app:layout_constraintStart_toEndOf="@+id/textInputName"
+                    app:layout_constraintTop_toTopOf="@+id/textInputName" />
+
+                <!--                <EditText-->
+                <!--                    android:id="@+id/textInputSubs"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:ems="10"-->
+                <!--                    android:hint="@string/placeholderSubstitutions"-->
+                <!--                    android:inputType="number"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/substitutionsText" />-->
+
+                <TextView
+                    android:id="@+id/substitutionsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/substitutions"
+                    android:textSize="30sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/nameText" />
+
+                <Button
+                    android:id="@+id/subSub"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:backgroundTint="@color/red"
+                    android:text="@string/minus"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toEndOf="@+id/substitutionsText"
+                    app:layout_constraintTop_toTopOf="@+id/substitutionsText" />
+
+                <Button
+                    android:id="@+id/addSub"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:backgroundTint="@color/green"
+                    android:text="@string/plus"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toEndOf="@+id/subSub"
+                    app:layout_constraintTop_toTopOf="@+id/subSub" />
+
+                <TextView
+                    android:id="@+id/allergens"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/allergens"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/substitutionsText" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputFoodItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:hint="@string/placeholderAllergen"
+                    android:maxLines="1"
+                    app:layout_constraintEnd_toStartOf="@+id/addAllergen"
+                    app:layout_constraintStart_toStartOf="@+id/allergens"
+                    app:layout_constraintTop_toBottomOf="@+id/allergens" />
+
+                <Button
+                    android:id="@+id/addAllergen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/green"
+                    android:text="@string/AddFoodButtonText"
+                    app:layout_constraintEnd_toEndOf="@+id/allergens"
+                    app:layout_constraintTop_toTopOf="@+id/textInputFoodItem" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/profileRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:scrollbars="vertical"
+                    android:background="@android:drawable/editbox_background"
+                    app:layoutManager="LinearLayoutManager"
+                    app:layout_constraintStart_toStartOf="@+id/textInputFoodItem"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputFoodItem">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+<!--                <ScrollView-->
+<!--                    android:id="@+id/scrollView"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="100dp"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    app:layout_constraintStart_toStartOf="@+id/textInputFoodItem"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/textInputFoodItem">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/nestedLinearLayout"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:nestedScrollingEnabled="true">-->
+
+
+<!--                    </LinearLayout>-->
+<!--                   </ScrollView>-->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <Button
+            android:id="@+id/returnToHomePage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/blue"
+            android:text="@string/backToHomeButtonText"
+            app:layout_constraintEnd_toEndOf="@+id/profileNestedLinearLayout"
+            app:layout_constraintTop_toBottomOf="@+id/profileNestedLinearLayout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

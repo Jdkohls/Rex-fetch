@@ -1,0 +1,5 @@
+$ curl -X POST localhost:3333/recipe
+POST
+
+$ curl -X POST localhost:3333/hello
+Hello world!
