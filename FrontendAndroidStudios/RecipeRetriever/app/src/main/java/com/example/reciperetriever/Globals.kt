@@ -1,7 +1,5 @@
 package com.example.reciperetriever
 
-import android.util.Log
-import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import com.example.reciperetriever.Repo.LoginRepo
 import com.example.reciperetriever.Repo.RecipeRepo
@@ -11,7 +9,6 @@ import kotlinx.coroutines.launch
 import kotlinx.serialization.Serializable
 import org.json.JSONArray
 import org.json.JSONObject
-import java.lang.Exception
 import kotlin.random.Random
 
 @Serializable
@@ -21,7 +18,7 @@ object Globals {
     var fridgeArray: MutableList<String> = ArrayList()
     var filteredArray: MutableList<String> = ArrayList()
     var groceryArray: MutableList<String> = ArrayList()
-    var loginDict: MutableMap<String, String> = mutableMapOf<String, String>()
+    var loginDict = mutableMapOf<String, String>()
     var recipeArray =  MutableLiveData<MutableList<RecipeBrief>>()
     var recipeSearchReturn = ArrayList<RecipeBrief>()
     var api_calls_made = 0
@@ -89,8 +86,7 @@ object Globals {
     // Deep Copy an array... theoretically
     fun deepCopy(src: MutableList<String>, dst: MutableList<String>) {
         for (item in src) {
-            val newItem = item.toString()
-            addStrToArray(newItem, dst)
+            addStrToArray(item, dst)
         }
         /* I dislike the fact that I had to even make this */
     }
@@ -154,7 +150,7 @@ object Globals {
 
     //functions that send requests/data to backend
     fun login(username: String, password: String) {
-        //send_login_request returns a JSON object of the form: {"jwt":"somethin"}
+        //send_login_request returns a JSON object of the form: {"jwt":"something"}
         GlobalScope.launch(Dispatchers.IO) {
             try {
                 user_jwt = LoginRepo().send_login_request(username, password)

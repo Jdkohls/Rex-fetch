@@ -1,18 +1,12 @@
 package com.example.reciperetriever.Repo
 
-import android.util.Log
-import com.example.reciperetriever.Data.OutgoingRecipe
-import com.example.reciperetriever.Globals
-import com.example.reciperetriever.GsonRecipe
 //import com.example.reciperetriever.JWT
 //import kotlinx.serialization.decodeFromString
-import kotlinx.serialization.encodeToString
-import kotlinx.serialization.json.Json
+import android.util.Log
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.net.URL
 import javax.net.ssl.HttpsURLConnection
-import com.google.gson.Gson
 
 const val spoonacular_url = "https://api.spoonacular.com"
 const val API_KEY = "ea7e630e9bfa4292b713110fb362978d"
@@ -60,7 +54,7 @@ class RecipeRepo {
                 //this works
                 return response.toString()
             }
-            throw Exception("Failed to GET from API, responsecode: $responseCode")
+            throw Exception("Failed to GET from API, responseCode: $responseCode")
         }
         return ""
     }
@@ -94,7 +88,7 @@ class RecipeRepo {
                 //Log.i("recipeRepo", "response was: $response") this shit works
                 return response.toString()
             }
-            throw Exception("Failed to GET from API, responsecode: $responseCode")
+            throw Exception("Failed to GET from API, responseCode: $responseCode")
         }
         return ""
     }

@@ -15,7 +15,6 @@
             android:id="@+id/myFridge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:text="@string/grocery_main_desc"
             android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -43,18 +42,15 @@
             android:layout_marginTop="20dp"
             android:text="@string/thirdPageDesc1"
             android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.515"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/groceryRecyclerView"
             app:layout_constraintTop_toBottomOf="@+id/groceryRecyclerView" />
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textInputFoodItem"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="@string/exampleFood"
             android:singleLine="true"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/groceryDescription"
             app:layout_constraintTop_toBottomOf="@+id/groceryDescription" />
 

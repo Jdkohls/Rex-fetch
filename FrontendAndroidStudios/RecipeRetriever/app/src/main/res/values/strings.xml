@@ -19,7 +19,7 @@
     <!--    Fridge    -->
 <!--    <string name="firstPage">Fridge</string>-->
     <string name="fridge_main_desc">My Fridge</string>
-    <string name="firstPageDesc1">Input the ingredients you currently have in your fridge.\nIf you make a typo, you starve. So&#8230; don\'t make typos!</string>
+    <string name="firstPageDesc1">Input the ingredients you currently have in your fridge.</string>
 <!--    <string name="firstPageDesc2">Below are the ingredients currently in your fridge!</string>-->
     <string name="addFoodToFridgeButtonText">Add To Fridge</string>
     <string name="moveToGroceryButtonText">Move To Grocery</string>
@@ -37,7 +37,7 @@
     <!--    Grocery    -->
 <!--    <string name="thirdPage">Grocery</string>-->
     <string name="grocery_main_desc">My Grocery List</string>
-    <string name="thirdPageDesc1">Input the ingredients you want to buy.\nIf you bought an ingredient click \"Add To Fridge\" to move food to fridge!</string>
+    <string name="thirdPageDesc1">Input the ingredients you want to buy.</string>
     <string name="addFoodToGroceryButtonText">Add To Grocery</string>
     <string name="moveToFridgeButtonText">Move To Fridge</string>
 

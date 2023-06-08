@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.reciperetriever.databinding.RecipesMainBinding
@@ -27,7 +26,7 @@ class ScrollableRecipePage : Fragment(), CallbackInterface {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = RecipesMainBinding.inflate(inflater, container, false)
         syncData(this)
         reInitRecyclerViewFilter()

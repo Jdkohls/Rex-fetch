@@ -31,7 +31,7 @@ class NewUser : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = NewUserBinding.inflate(inflater, container, false)
         reInitRecyclerView()

@@ -23,7 +23,7 @@ class IndividualRecipePage : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = SpecificRecipeBinding.inflate(inflater, container, false)
         reInitRecyclerViewFood()
