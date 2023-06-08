@@ -1,5 +1,7 @@
 package com.example.reciperetriever
 
+import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import com.example.reciperetriever.Repo.LoginRepo
 import com.example.reciperetriever.Repo.RecipeRepo
@@ -204,6 +206,10 @@ object Globals {
                 api_calls_made += 1
                 val jsonObject = JSONObject(jsonString)
                 val resultsArray: JSONArray = jsonObject.getJSONArray("results")
+                if(resultsArray.length() == 0) {
+                    //no recipes returned
+                    throw Exception("No recipes found for these ingredients.")
+                }
                 for (i in 0 until resultsArray.length()) {
                     val recipeObject = resultsArray.getJSONObject(i)
                     val id = recipeObject.getInt("id")

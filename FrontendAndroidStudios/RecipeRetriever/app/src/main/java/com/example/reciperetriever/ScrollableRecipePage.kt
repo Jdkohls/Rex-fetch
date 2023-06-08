@@ -52,15 +52,20 @@ class ScrollableRecipePage : Fragment(), CallbackInterface {
 
             //1. Check if we have at least 4 ingredients that user has.
             if(Globals.filteredArray.size < 4) {
-                Toast.makeText(context, "Too few ingredients to search for recipes.", Toast.LENGTH_LONG)
+                Toast.makeText(context, "Too few ingredients to search for recipes.",
+                    Toast.LENGTH_LONG).show()
             } else {
                 //we have enough ingredients to populate the list,
                 //2. call Globals function to get recipes.
                 if(Globals.api_calls_made < 10) {
-                    Globals.getRecipes()
+                    try {
+                        Globals.getRecipes()
+                    } catch (e: Exception) {
+                        Toast.makeText(context, e.message, Toast.LENGTH_LONG).show()
+                    }
                 } else {
                     Toast.makeText(context, "Sorry, too many recipe searches were made. " +
-                            "Try again later.", Toast.LENGTH_LONG)
+                            "Try again later.", Toast.LENGTH_LONG).show()
                 }
             }
         }
